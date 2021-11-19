@@ -1,7 +1,4 @@
 # Multi-Effect
-A wireless control multi-effect system for electric guitars
-
-# Multi-Effect
 A wireless control multi-effect system for electric guitars <br /> <br />
 
 
