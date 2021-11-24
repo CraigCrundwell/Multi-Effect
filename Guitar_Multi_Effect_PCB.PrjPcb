@@ -89,7 +89,7 @@ GenerateClassCluster=0
 DocumentUniqueId=XDXCNXRH
 
 [Document4]
-DocumentPath=JLC_Outjob.OutJob
+DocumentPath=Multi-Effect_Outjob.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -144,6 +144,78 @@ DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Design Rule Check - Eff
 DItemRevisionGUID=
 
 [GeneratedDocument2]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\NC Drill\Effect_PCB-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\NC Drill\Effect_PCB-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\NC Drill\Effect_PCB.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.G1
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.G2
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GM4
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\NC Drill\Effect_PCB.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.REP
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Gerber\Effect_PCB.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument20]
 DocumentPath=Project Outputs for Guitar_Multi_Effect_PCB\Footprint Comparison - Effect_PCB.html
 DItemRevisionGUID=
 
