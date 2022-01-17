@@ -1,0 +1,646 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Footprint Comparison Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Footprint Comparison Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2021-11-17</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:33:29 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Effect_PCB.PcbDoc" class="file"><acronym title="C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Effect_PCB.PcbDoc">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Effect_PCB.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="IDRLARI3PXJHWDKW3WP2ZRHPF34PX333FKRAWDFDMXFJZOH4X440UJ"><h2>Contents</h2></a><p class="contents_level1"><a href="#IDRLARI3PXJHWDKW3WP2ZRHPF34PX333FKRAWDFDMXFJZOH4X440UJ">Contents</a></p>
+<p class="contents_level1"><a href="#ID2BWOBBJYKGUPLOCTDNWM2NUICJW1OPGTJGFYQ5HDOXVSEO0EKHGP">Components Status Summary</a></p>
+<p class="contents_level2"><a href="#IDSEOWLREUUIUTPJE3TJ4FFTHLVJ1YQT2L0WO43DMABS3IVIBISZUL">Matched Components List<br></a></p><br><a name="ID2BWOBBJYKGUPLOCTDNWM2NUICJW1OPGTJGFYQ5HDOXVSEO0EKHGP"><h2>Components Status Summary</h2></a><h2>Matched Components List</h2><a name="IDSEOWLREUUIUTPJE3TJ4FFTHLVJ1YQT2L0WO43DMABS3IVIBISZUL"><table>
+<tr>
+<th class="column1">Designator</th>
+<th class="column2">Footprint</th>
+<th class="column3">Footprint reference</th>
+<th class="column4">Footprint to reference Library</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C1</td>
+<td style="Width:20%" class="column2">CAPC3216X180N</td>
+<td style="Width:20%" class="column3">CAPC3216X180N</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C2</td>
+<td style="Width:20%" class="column2">CHIP_1210</td>
+<td style="Width:20%" class="column3">CHIP_1210</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C3</td>
+<td style="Width:20%" class="column2">CAPC3216X180N</td>
+<td style="Width:20%" class="column3">CAPC3216X180N</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C4</td>
+<td style="Width:20%" class="column2">CHIP_1210</td>
+<td style="Width:20%" class="column3">CHIP_1210</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C5</td>
+<td style="Width:20%" class="column2">CHIP_1210</td>
+<td style="Width:20%" class="column3">CHIP_1210</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C6</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C7</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C9</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C10</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C11</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C13</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C14</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C15</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C16</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C19</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C20</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C21</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C22</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C23</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C24</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C25</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C26</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C27</td>
+<td style="Width:20%" class="column2">CHIP_0603</td>
+<td style="Width:20%" class="column3">CHIP_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D1</td>
+<td style="Width:20%" class="column2">0402 LED Generic</td>
+<td style="Width:20%" class="column3">0402 LED Generic</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D2</td>
+<td style="Width:20%" class="column2">0402 LED Generic</td>
+<td style="Width:20%" class="column3">0402 LED Generic</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D3</td>
+<td style="Width:20%" class="column2">0402 LED Generic</td>
+<td style="Width:20%" class="column3">0402 LED Generic</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D4</td>
+<td style="Width:20%" class="column2">SP0503BAHTG</td>
+<td style="Width:20%" class="column3">SP0503BAHTG</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D5</td>
+<td style="Width:20%" class="column2">0402 LED Generic</td>
+<td style="Width:20%" class="column3">0402 LED Generic</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">J1</td>
+<td style="Width:20%" class="column2">ACJS-IHS</td>
+<td style="Width:20%" class="column3">ACJS-IHS</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">J2</td>
+<td style="Width:20%" class="column2">ACJS-IHS</td>
+<td style="Width:20%" class="column3">ACJS-IHS</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">P1</td>
+<td style="Width:20%" class="column2">2 Test Points</td>
+<td style="Width:20%" class="column3">2 Test Points</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Q</td>
+<td style="Width:20%" class="column2">SS8050-G</td>
+<td style="Width:20%" class="column3">SS8050-G</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Q1</td>
+<td style="Width:20%" class="column2">SS8050-G</td>
+<td style="Width:20%" class="column3">SS8050-G</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R1</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R2</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R3</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R4</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R5</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R6</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R7</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R8</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R9</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R10</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R11</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R12</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R13</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R14</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R15</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R16</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R17</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R18</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R19</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R20</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R21</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R22</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R23</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R24</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R25</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R26</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R27</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R28</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R29</td>
+<td style="Width:20%" class="column2">CHIP_R_0603</td>
+<td style="Width:20%" class="column3">CHIP_R_0603</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">S1</td>
+<td style="Width:20%" class="column2">TS-1185EC-C-D-B</td>
+<td style="Width:20%" class="column3">TS-1185EC-C-D-B</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">S2</td>
+<td style="Width:20%" class="column2">TS-1185EC-C-D-B</td>
+<td style="Width:20%" class="column3">TS-1185EC-C-D-B</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U1</td>
+<td style="Width:20%" class="column2">SOT230P700X180-4N</td>
+<td style="Width:20%" class="column3">SOT230P700X180-4N</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U2</td>
+<td style="Width:20%" class="column2">MODULE_ESP32-WROOM-32E</td>
+<td style="Width:20%" class="column3">MODULE_ESP32-WROOM-32E</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U3</td>
+<td style="Width:20%" class="column2">U254-051T-4BH83-F1S</td>
+<td style="Width:20%" class="column3">U254-051T-4BH83-F1S</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U4</td>
+<td style="Width:20%" class="column2">SOIC-28</td>
+<td style="Width:20%" class="column3">SOIC-28</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U5</td>
+<td style="Width:20%" class="column2">SOT-23</td>
+<td style="Width:20%" class="column3">SOT-23</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U6</td>
+<td style="Width:20%" class="column2">24LC32AT-I/MS</td>
+<td style="Width:20%" class="column3">24LC32AT-I/MS</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U7</td>
+<td style="Width:20%" class="column2">24LC512-I/SN</td>
+<td style="Width:20%" class="column3">24LC512-I/SN</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U8</td>
+<td style="Width:20%" class="column2">QFN50P500X500X100-29N</td>
+<td style="Width:20%" class="column3">QFN50P500X500X100-29N</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Y1</td>
+<td style="Width:20%" class="column2">XTAL_ABS07-32.768KHZ-T</td>
+<td style="Width:20%" class="column3">XTAL_ABS07-32.768KHZ-T</td>
+<td style="Width:60%" class="column4">C:\Users\1crun\OneDrive - University of Waterloo\PCB\Guitar_Multi_Effect_PCB\Guitar_Multi_Effect_lib.PcbLib</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

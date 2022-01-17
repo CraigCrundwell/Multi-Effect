@@ -1,0 +1,25 @@
+Removed Member From Class: ClassName=ESP32 Member=P1
+Removed Member From Class: ClassName=ESP32 Member=T0
+Change Component Comment : Designator=P0 Old Comment=Single Test Point New Comment=Test Point
+Change Component Comment : Designator=P1 Old Comment=Single Test Point New Comment=Test Point
+Change Component Comment : Designator=P2 Old Comment=Single Test Point New Comment=Test Point
+Change Component Comment : Designator=S0 Old Comment=Single Test Point New Comment=Test Point
+Change Component Comment : Designator=S1 Old Comment=Single Test Point New Comment=Test Point
+Change Component Comment : Designator=T0 Old Comment=Single Test Point New Comment=Test Point
+Change Component Designator: OldDesignator=IN NewDesignator=P9
+Change Component Designator: OldDesignator=OUT NewDesignator=P8
+Change Component Designator: OldDesignator=P0 NewDesignator=P5
+Change Component Designator: OldDesignator=P1 NewDesignator=P6
+Change Component Designator: OldDesignator=P2 NewDesignator=P7
+Change Component Designator: OldDesignator=Q2 NewDesignator=Q2'
+Change Component Designator: OldDesignator=S0 NewDesignator=P3
+Change Component Designator: OldDesignator=S1 NewDesignator=P4
+Change Component Designator: OldDesignator=T0 NewDesignator=P2
+Added Component: Designator=P10(1 Solder Pad)
+Added Pin To Net: NetName=NetU2_31 Pin=P10-1
+Change Net Name : Old Net Name=NetU2_31 New Net Name=NetP10_1
+Added Member To Class: ClassName=ESP32 Member=Component P4 Test Point
+Added Member To Class: ClassName=ESP32 Member=Component P6 Test Point
+Added Member To Class: ClassName=ESP32 Member=Component P7 Test Point
+Added Member To Class: ClassName=FV-1 Member=Component P9 Double Test Point
+Added Member To Class: ClassName=ESP32 Member=Component P10 Test Point

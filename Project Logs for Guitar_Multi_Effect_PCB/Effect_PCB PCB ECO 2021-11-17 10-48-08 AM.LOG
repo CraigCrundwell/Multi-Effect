@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=SCL Pin=P1-1
+Removed Member From Class: ClassName=FV-1 Member=P1
+Added Component: Designator=P?(2 Test Points)
+Added Pin To Net: NetName=SCL Pin=P?-1
+Added Pin To Net: NetName=SCL Pin=P?-2
+Added Member To Class: ClassName=FV-1 Member=Component P? I2C Test Point

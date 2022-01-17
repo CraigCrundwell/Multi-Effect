@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=RXD Pin=U8-25
+Removed Pin From Net: NetName=TXD Pin=U8-26
+Change Component Description : Designator=C3 Old Description=50V 100nF C0G ±5% 1206 Multilayer Ceramic Capacitors New Description=50V 100nF C0G ±5% 1206 Multilayer Ceramic Capacitors 
+Added Pin To Net: NetName=TXD Pin=U8-25
+Added Pin To Net: NetName=RXD Pin=U8-26
+Added Member To Class: ClassName=ESP32 Member=Component S2 TS-1185EC-C-D-B

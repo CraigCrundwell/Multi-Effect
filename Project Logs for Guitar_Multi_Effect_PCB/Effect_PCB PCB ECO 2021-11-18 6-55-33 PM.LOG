@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=3V3_D Pin=D1-2
+Removed Pin From Net: NetName=3V3_D Pin=R19-1
+Removed Pin From Net: NetName=GND Pin=R22-2
+Removed Member From Class: ClassName=ESP32 Member=D1
+Removed Member From Class: ClassName=ESP32 Member=R22

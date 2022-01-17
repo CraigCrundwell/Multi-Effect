@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=IO0 Pin=Q1-2
+Removed Pin From Net: NetName=DTR Pin=Q1-3
+Change Component Description : Designator=C3 Old Description=50V 100nF C0G ±5% 1206 Multilayer Ceramic Capacitors New Description=50V 100nF C0G ±5% 1206 Multilayer Ceramic Capacitors 
+Added Pin To Net: NetName=DTR Pin=Q1-2
+Added Pin To Net: NetName=IO0 Pin=Q1-3
+Change Net Name : Old Net Name=NetQ_1 New Net Name=NetQ2'_1
+Added Member To Class: ClassName=FV-1 Member=Component C20 0.1uF

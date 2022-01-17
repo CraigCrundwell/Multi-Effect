@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=3V3_A Pin=D1-2
+Removed Pin From Net: NetName=5V Pin=D2-2
+Removed Pin From Net: NetName=3V3_D Pin=D3-2
+Removed Pin From Net: NetName=NetD5_2 Pin=D5-2
+Removed Pin From Net: NetName=NetD1_1 Pin=R13-1
+Removed Pin From Net: NetName=NetD2_1 Pin=R16-2
+Removed Pin From Net: NetName=NetD3_1 Pin=R22-1
+Removed Pin From Net: NetName=NetD5_1 Pin=R27-1
+Removed Member From Class: ClassName=FV-1 Member=D1
+Removed Member From Class: ClassName=FV-1 Member=D2
+Removed Member From Class: ClassName=ESP32 Member=D3
+Removed Member From Class: ClassName=ESP32 Member=D5
+Change Component Footprint: Designator=D1 Old Footprint=0402 LED Generic New Footprint=0603 LED Generic
+Change Component Footprint: Designator=D2 Old Footprint=0402 LED Generic New Footprint=0603 LED Generic
+Change Component Footprint: Designator=D3 Old Footprint=0402 LED Generic New Footprint=0603 LED Generic
+Change Component Footprint: Designator=D5 Old Footprint=0402 LED Generic New Footprint=0603 LED Generic
+Change Component Comment : Designator=D5 Old Comment=Blue LED New Comment=Red LED
+Change Component Comment : Designator=D1 Old Comment=Clip LED New Comment=Red LED
+Change Component Comment : Designator=D2 Old Comment=Power LED New Comment=Blue LED
+Change Component Comment : Designator=D3 Old Comment=Red LED New Comment=Clip LED
+Added Pin To Net: NetName=3V3_D Pin=D1-2
+Added Pin To Net: NetName=NetD5_2 Pin=D2-2
+Added Pin To Net: NetName=3V3_A Pin=D3-2
+Added Pin To Net: NetName=5V Pin=D5-2
+Added Pin To Net: NetName=NetD3_1 Pin=R13-1
+Added Pin To Net: NetName=NetD5_1 Pin=R16-2
+Added Pin To Net: NetName=NetD1_1 Pin=R22-1
+Added Pin To Net: NetName=NetD2_1 Pin=R27-1
+Change Net Name : Old Net Name=NetD5_2 New Net Name=NetD2_2
+Added Member To Class: ClassName=ESP32 Member=Component D1 Red LED
+Added Member To Class: ClassName=ESP32 Member=Component D2 Blue LED
+Added Member To Class: ClassName=FV-1 Member=Component D3 Clip LED
+Added Member To Class: ClassName=FV-1 Member=Component D5 Red LED

@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=FV-1 Member=P6
+Change Component Designator: OldDesignator=S2 NewDesignator=P10
+Added Member To Class: ClassName=FV-1 Member=Component P1 I2C Test Point
+Added Member To Class: ClassName=ESP32 Member=Component P2 Test Point
+Added Member To Class: ClassName=ESP32 Member=Component P10 Test Point
+Added Member To Class: ClassName=ESP32 Member=Component S1 TS-1185EC-C-D-B

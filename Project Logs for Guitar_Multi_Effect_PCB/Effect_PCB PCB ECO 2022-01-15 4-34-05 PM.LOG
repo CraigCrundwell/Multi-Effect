@@ -1,0 +1,12 @@
+Added Component: Designator=C?(CHIP_0603)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DigiKey-Purchase-URL"; Value = "https://snapeda.com/shop?store=DigiKey&id=940461"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser-Purchase-URL"; Value = "https://snapeda.com/shop?store=Mouser&id=940461"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "AC0402FR-071ML"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1005 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/AC0402FR-071ML/Yageo/view-part/940461/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=EN Pin=C?-1
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Member To Class: ClassName=ESP32 Member=Component C? 1nf

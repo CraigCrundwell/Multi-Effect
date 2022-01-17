@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=C11-1
+Removed Pin From Net: NetName=AUDIO_IN Pin=R10-2
+Removed Pin From Net: NetName=AUDIO_OUT Pin=R11-1
+Removed Member From Class: ClassName=FV-1 Member=C11
+Removed Member From Class: ClassName=FV-1 Member=R6
+Removed Member From Class: ClassName=FV-1 Member=R10
+Removed Member From Class: ClassName=FV-1 Member=R11
+Added Pin To Net: NetName=AUDIO_OUT Pin=C5-2
+Added Pin To Net: NetName=AUDIO_IN Pin=C6-1
+Added Pin To Net: NetName=AUDIO_IN Pin=R5-2

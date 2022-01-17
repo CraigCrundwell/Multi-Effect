@@ -1,0 +1,3 @@
+Added Component: Designator=P11(1 Solder Pad)
+Added Pin To Net: NetName=GND Pin=P11-1
+Added Member To Class: ClassName=ESP32 Member=Component P11 Test Point

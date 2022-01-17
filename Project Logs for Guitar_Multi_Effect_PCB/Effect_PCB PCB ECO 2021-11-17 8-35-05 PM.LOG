@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=GND Pin=C1-1
+Removed Pin From Net: NetName=VREF Pin=C1-2
+Change Component Footprint: Designator=C1 Old Footprint=CAPC3216X180N New Footprint=CHIP_0603
+Change Component Comment : Designator=C1 Old Comment=100n New Comment=0.1uF
+Change Component Designator: OldDesignator=D? NewDesignator=D4
+Change component parameters: Designator = "C1" ("C1"); Footprint = "CAPC3216X180N"; UniqueID = "\BNYNDLQF" ("\BNYNDLQF")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DigiKey-Purchase-URL"; Value = "https://snapeda.com/shop?store=DigiKey&id=940461"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser-Purchase-URL"; Value = "https://snapeda.com/shop?store=Mouser&id=940461"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "AC0402FR-071ML"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "1005 Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/AC0402FR-071ML/Yageo/view-part/940461/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VREF Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2

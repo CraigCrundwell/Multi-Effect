@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=SCL Pin=P1-2
+Removed Pin From Net: NetName=3V3_A Pin=R29-1
+Removed Pin From Net: NetName=SCL Pin=R29-2
+Removed Pin From Net: NetName=SCL Pin=U2-33
+Removed Pin From Net: NetName=SCL Pin=U4-15
+Removed Pin From Net: NetName=SCL Pin=U6-5
+Removed Pin From Net: NetName=SCL Pin=U7-5
+Removed Member From Class: ClassName=FV-1 Member=R29
+Added Component: Designator=R?(CHIP_R_0603)
+Added Pin To Net: NetName=3V3_A Pin=R?-1
+Added Pin To Net: NetName=SDA Pin=P1-2
+Added Pin To Net: NetName=SDA Pin=R?-2
+Added Pin To Net: NetName=SDA Pin=U2-33
+Added Pin To Net: NetName=SDA Pin=U4-15
+Added Pin To Net: NetName=SDA Pin=U6-5
+Added Pin To Net: NetName=SDA Pin=U7-5
+Added Net: Name=SDA
+Added Member To Class: ClassName=FV-1 Member=Component R? DNP

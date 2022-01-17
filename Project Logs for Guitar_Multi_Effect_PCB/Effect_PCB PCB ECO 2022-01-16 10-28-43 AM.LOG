@@ -1,0 +1,63 @@
+Removed Pin From Net: NetName=GND Pin=C11-1
+Removed Pin From Net: NetName=5V Pin=D5-2
+Removed Pin From Net: NetName=AUDIO_IN Pin=R10-2
+Removed Pin From Net: NetName=AUDIO_OUT Pin=R11-1
+Removed Pin From Net: NetName=GND Pin=R16-1
+Removed Pin From Net: NetName=GND Pin=R27-2
+Removed Member From Class: ClassName=FV-1 Member=C11
+Removed Member From Class: ClassName=ESP32 Member=D2
+Removed Member From Class: ClassName=FV-1 Member=D5
+Removed Member From Class: ClassName=FV-1 Member=R6
+Removed Member From Class: ClassName=FV-1 Member=R10
+Removed Member From Class: ClassName=FV-1 Member=R11
+Removed Member From Class: ClassName=FV-1 Member=R16
+Removed Member From Class: ClassName=ESP32 Member=R27
+Added Component: Designator=C11(CHIP_0603)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DigiKey-Purchase-URL"; Value = "https://snapeda.com/shop?store=DigiKey&id=940461"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser-Purchase-URL"; Value = "https://snapeda.com/shop?store=Mouser&id=940461"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "AC0402FR-071ML"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1005 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/AC0402FR-071ML/Yageo/view-part/940461/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=D1(LED_EASV3015RGBA0)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Everlight Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "EASV3015RGBA0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SMD-4 Everlight Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/EASV3015RGBA0/Everlight%20Electronics%20Co%20Ltd/view-part/1921996/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R6(CHIP_R_0603)
+Added Component: Designator=R10(CHIP_R_0603)
+Added Component: Designator=R11(CHIP_R_0603)
+Added Pin To Net: NetName=AUDIO_OUT Pin=C5-2
+Added Pin To Net: NetName=AUDIO_IN Pin=C6-1
+Added Pin To Net: NetName=EN Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=3V3_D Pin=D1-1
+Added Pin To Net: NetName=AUDIO_IN Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R10-1
+Added Pin To Net: NetName=GND Pin=R11-1
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=R6-2
+Added Net: Name=NetD1_2
+Added Pin To Net: NetName=NetD1_3 Pin=D1-3
+Added Pin To Net: NetName=NetD1_3 Pin=R10-2
+Added Net: Name=NetD1_3
+Added Pin To Net: NetName=NetD1_4 Pin=D1-4
+Added Pin To Net: NetName=NetD1_4 Pin=R11-2
+Added Net: Name=NetD1_4
+Added Pin To Net: NetName=NetU2_9 Pin=U2-9
+Added Net: Name=NetU2_9
+Added Pin To Net: NetName=NetU2_12 Pin=U2-12
+Added Net: Name=NetU2_12
+Added Pin To Net: NetName=NetU2_14 Pin=U2-14
+Added Net: Name=NetU2_14
+Added Member To Class: ClassName=ESP32 Member=Component C11 1nf
+Added Member To Class: ClassName=ESP32 Member=Component D1 EASV3015RGBA0
+Added Member To Class: ClassName=ESP32 Member=Component R6 500
+Added Member To Class: ClassName=ESP32 Member=Component R10 500
+Added Member To Class: ClassName=ESP32 Member=Component R11 500

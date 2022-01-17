@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GND Pin=-S
+Removed Pin From Net: NetName=IN Pin=-T
+Removed Pin From Net: NetName=GND Pin=J2-S
+Removed Pin From Net: NetName=OUT Pin=J2-T
+Removed Member From Class: ClassName=FV-1 Member=
+Change Component Footprint: Designator=J2 Old Footprint=ACJS-IHS New Footprint=2 Test Points
+Added Component: Designator=J1(2 Test Points)
+Add component (AddParameter): Name = "Price"; Value = "0.5"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=IN Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Pin To Net: NetName=OUT Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J2-2
+Added Member To Class: ClassName=FV-1 Member=Component J1 Input

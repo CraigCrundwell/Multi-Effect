@@ -1,0 +1,26 @@
+Added Component: Designator=C8(UCD1E101MCL1GS)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Added Component: Designator=C12(UCD1E101MCL1GS)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Added Component: Designator=C17(UCD1E101MCL1GS)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Added Component: Designator=C18(EEE1EA470WAP)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.farnell.com/datasheets/2151198.pdf?src-supplier=Element14"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=C8-+
+Added Pin To Net: NetName=GND Pin=C8--
+Added Pin To Net: NetName=3V3_A Pin=C12-+
+Added Pin To Net: NetName=GND Pin=C12--
+Added Pin To Net: NetName=VREF Pin=C17-+
+Added Pin To Net: NetName=GND Pin=C17--
+Added Pin To Net: NetName=VBIAS Pin=C18-+
+Added Pin To Net: NetName=GND Pin=C18--
+Added Member To Class: ClassName=FV-1 Member=Component C8 100u
+Added Member To Class: ClassName=FV-1 Member=Component C12 100u
+Added Member To Class: ClassName=FV-1 Member=Component C17 100u
+Added Member To Class: ClassName=FV-1 Member=Component C18 47u

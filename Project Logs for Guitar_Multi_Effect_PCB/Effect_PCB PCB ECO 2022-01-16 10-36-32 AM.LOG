@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=GND Pin=R6-1
+Removed Pin From Net: NetName=GND Pin=R10-1
+Removed Pin From Net: NetName=GND Pin=R11-1
+Added Pin To Net: NetName=LED_B Pin=R6-1
+Added Pin To Net: NetName=LED_B Pin=U2-9
+Added Net: Name=LED_B
+Added Pin To Net: NetName=LED_G Pin=R10-1
+Added Pin To Net: NetName=LED_G Pin=U2-12
+Added Net: Name=LED_G
+Added Pin To Net: NetName=LED_R Pin=R11-1
+Added Pin To Net: NetName=LED_R Pin=U2-14
+Added Net: Name=LED_R
+Added Member To Class: ClassName=ESP32 Member=Component C11 1nf
+Added Member To Class: ClassName=ESP32 Member=Component R6 500
+Added Member To Class: ClassName=ESP32 Member=Component R10 500
+Added Member To Class: ClassName=ESP32 Member=Component R11 500
